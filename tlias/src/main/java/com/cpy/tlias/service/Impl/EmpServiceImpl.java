@@ -25,8 +25,10 @@ public class EmpServiceImpl implements EmpService {
     public PageBean empList (Integer page, Integer pageSize) {
         // 调用empMapper.empCount()方法查询总数
         long total = empMapper.empCount();
+        // 计算出起始索引  公式为页码-1 再乘页面容量
+        Integer start = (page-1) * pageSize;
         // 调用empMapper.empList方法进行员工分页查询
-        List<Emp> empList = empMapper.empList(page,pageSize);
+        List<Emp> empList = empMapper.empList(start,pageSize);
         // 创建一个PageBean实例，并返回
         return new PageBean(total,empList);
 

@@ -19,7 +19,7 @@ public interface EmpMapper {
      * pageSize 页码容量
      *
      */
-    @Select("select * from emp limit #{page},#{pageSize}")
-    List<Emp> empList(Integer page ,Integer pageSize);
+    @Select("select * from emp limit #{start},#{pageSize}")
+    List<Emp> empList(Integer start ,Integer pageSize);
 
 }
