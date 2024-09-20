@@ -51,6 +51,13 @@
             <optional>true</optional>
         </dependency>
 
+        <!--分页查询-->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>1.4.7</version>
+        </dependency>
+
 
         <!--devtools热部署-->
         <dependency>
