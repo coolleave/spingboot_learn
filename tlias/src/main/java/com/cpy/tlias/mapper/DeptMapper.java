@@ -11,6 +11,13 @@ public interface DeptMapper {
     @Select("select * from dept ")
     List<Dept> deptlist();
 
+    /**
+     * 根据部门id查询部门信息
+     * @param id 部门id
+     * @return 返回dept对象
+     */
+    @Select("select * from dept where id=#{id}")
+    Dept deptId(Integer id);
     /*
     删除新增部门
      */
@@ -30,4 +37,6 @@ public interface DeptMapper {
      */
     @Update("update dept set name=#{name},update_time=#{updateTime} where id=#{id}")
     void deptUpd(Dept dept);
+
+
 }
