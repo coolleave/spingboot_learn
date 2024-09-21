@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -25,7 +26,7 @@ public interface EmpMapper {
 
     // 使用PageHelper 对以上代码进行实现
 
-    @Select("select * from emp")
-    List<Emp> empList();
+//    @Select("select * from emp")
+    List<Emp> empList(Integer page, Integer pageSize, String name, Short gender, LocalDate begin, LocalDate end);
 
 }

@@ -8,6 +8,9 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -37,11 +40,11 @@ public class EmpServiceImpl implements EmpService {
 //    }
 
     // 使用PageHelper对上述代码进行实现
-    public PageBean empList(Integer page, Integer pageSize){
+    public PageBean empList(Integer page, Integer pageSize, String name, Short gender, LocalDate begin, LocalDate end){
         // 1.设置参数
         PageHelper.startPage(page,pageSize);
         // 2.执行查询
-        List<Emp> empList = empMapper.empList();
+        List<Emp> empList = empMapper.empList(page, pageSize, name, gender, begin, end);
         // 3.进行强制类型转换  列表->Page
         Page<Emp> p = (Page<Emp>)empList;
         // 进行封装
