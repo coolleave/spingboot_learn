@@ -29,4 +29,6 @@ public interface EmpMapper {
 //    @Select("select * from emp")
     List<Emp> empList(Integer page, Integer pageSize, String name, Short gender, LocalDate begin, LocalDate end);
 
+    // 批量删除员工
+    void empDel(List<Integer> ids);
 }

@@ -6,13 +6,11 @@ import com.cpy.tlias.service.Impl.EmpServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -40,5 +38,15 @@ public class EmpController {
         return Result.success(pageBean);
     }
 
-
+    /**
+     * 批量删除员工
+     * @param ids 删除员工id集合
+     *
+     */
+    @DeleteMapping("/{ids}")
+    public Result empDel(@PathVariable List<Integer> ids){
+        log.info("批量删除操作ids:{}",ids);
+        empService.empDel(ids);
+        return Result.success();
+    }
 }

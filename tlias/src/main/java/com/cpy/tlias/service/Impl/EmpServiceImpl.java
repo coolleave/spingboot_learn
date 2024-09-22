@@ -49,7 +49,13 @@ public class EmpServiceImpl implements EmpService {
         Page<Emp> p = (Page<Emp>)empList;
         // 进行封装
         return new PageBean(p.getTotal(),p.getResult());
+    }
+
+    // 批量删除员工
 
 
+    @Override
+    public void empDel(List<Integer> ids) {
+        empMapper.empDel(ids);
     }
 }
