@@ -52,10 +52,15 @@ public class EmpServiceImpl implements EmpService {
     }
 
     // 批量删除员工
-
-
     @Override
     public void empDel(List<Integer> ids) {
         empMapper.empDel(ids);
+    }
+
+    @Override
+    public void empAdd(Emp emp) {
+        emp.setCreateTime(LocalDateTime.now());
+        emp.setUpdateTime(LocalDateTime.now());
+        empMapper.empAdd(emp);
     }
 }

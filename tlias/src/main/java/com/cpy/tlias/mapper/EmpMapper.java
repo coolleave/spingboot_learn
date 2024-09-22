@@ -1,6 +1,7 @@
 package com.cpy.tlias.mapper;
 
 import com.cpy.tlias.polo.Emp;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -31,4 +32,9 @@ public interface EmpMapper {
 
     // 批量删除员工
     void empDel(List<Integer> ids);
+
+    // 增加员工
+    @Insert("insert into emp(username, name, gender, image, job, entrydate, dept_id, create_time, update_time) " +
+            "values (#{username}, #{name},#{gender},#{image},#{job},#{entrydate},#{deptId},#{createTime},#{updateTime}) ")
+    void empAdd(Emp emp);
 }

@@ -1,9 +1,11 @@
 package com.cpy.tlias.controller;
 
+import com.cpy.tlias.polo.Emp;
 import com.cpy.tlias.polo.PageBean;
 import com.cpy.tlias.polo.Result;
 import com.cpy.tlias.service.Impl.EmpServiceImpl;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.annotations.Insert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
@@ -47,6 +49,17 @@ public class EmpController {
     public Result empDel(@PathVariable List<Integer> ids){
         log.info("批量删除操作ids:{}",ids);
         empService.empDel(ids);
+        return Result.success();
+    }
+
+    /**
+     * 增加员工
+     * @param emp 员工参数json格式
+     */
+    @PostMapping
+    public  Result empAdd(@RequestBody Emp emp){
+        log.info("增加员工:{}",emp);
+        empService.empAdd(emp);
         return Result.success();
     }
 }

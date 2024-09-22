@@ -1,5 +1,6 @@
 package com.cpy.tlias.service;
 
+import com.cpy.tlias.polo.Emp;
 import com.cpy.tlias.polo.PageBean;
 
 import java.time.LocalDate;
@@ -15,4 +16,7 @@ public interface EmpService {
 
     // 批量删除员工
     void empDel(List<Integer> ids);
+
+    // 增加员工
+    void empAdd(Emp emp);
 }
