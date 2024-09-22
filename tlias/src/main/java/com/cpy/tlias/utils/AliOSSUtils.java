@@ -14,9 +14,9 @@ import java.util.UUID;
 public class AliOSSUtils {
 
     private String endpoint = "https://oss-cn-beijing.aliyuncs.com";
-    private String accessKeyId = "LTAI5tQphi9zPNE4Ww8LPsFe";
-    private String accessKeySecret = "JoExnJaGxhDRSp9SajidUtVMk5zIUV";
-    private String bucketName = "web-tlias-cpy";
+    private String accessKeyId = "";
+    private String accessKeySecret = "";
+    private String bucketName = "";
 
     /**
      * 实现上传图片到OSS
