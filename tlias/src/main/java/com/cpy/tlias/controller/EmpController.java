@@ -74,4 +74,16 @@ public class EmpController {
         Emp emp = empService.empQuery(id);
         return  Result.success(emp);
     }
+
+    /**
+     * 修改员工信息
+     * @param emp 传入员工对象
+
+     */
+    @PutMapping
+    public Result empUpdate(@RequestBody Emp emp){
+        log.info("修改员工信息{}",emp);
+        empService.empUpdate(emp);
+    return Result.success();
+    }
 }

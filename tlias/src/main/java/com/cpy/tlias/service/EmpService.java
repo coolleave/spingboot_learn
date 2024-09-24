@@ -22,4 +22,6 @@ public interface EmpService {
 
     // 查询单个员工
     Emp empQuery(Integer id);
+
+    void empUpdate(Emp emp);
 }
