@@ -19,4 +19,7 @@ public interface EmpService {
 
     // 增加员工
     void empAdd(Emp emp);
+
+    // 查询单个员工
+    Emp empQuery(Integer id);
 }

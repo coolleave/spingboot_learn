@@ -62,4 +62,16 @@ public class EmpController {
         empService.empAdd(emp);
         return Result.success();
     }
+
+
+    /**
+     * 查询单个员工
+     * @param id 员工id
+     */
+    @GetMapping("/{id}")
+    public Result empQuery(@PathVariable Integer id){
+        log.info("查询员工信息，id为{}",id);
+        Emp emp = empService.empQuery(id);
+        return  Result.success(emp);
+    }
 }
