@@ -25,7 +25,13 @@ mybatis:
     #配置mybatis的日志, 指定输出到控制台
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
-
+# 阿里云配置
+aliyun:
+  oss:
+    endpoint: https://oss-cn-beijing.aliyuncs.com
+    accessKeyId: LTAI5tQphi9zPNE4Ww8LPsFe
+    accessKeySecret: JoExnJaGxhDRSp9SajidUtVMk5zIUV
+    buketName: web-tlias-cpy
 
 
 
