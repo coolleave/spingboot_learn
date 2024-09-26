@@ -82,6 +82,13 @@
             <version>2.3.3</version>
         </dependency>
 
+        <!--引入jwt令牌依赖-->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.1</version>
+        </dependency>
+
 
         <!--devtools热部署-->
         <dependency>
