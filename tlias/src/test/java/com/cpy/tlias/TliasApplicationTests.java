@@ -32,7 +32,6 @@ class TliasApplicationTests {
                 .setExpiration(new Date(System.currentTimeMillis()+ 3600*1000))  // 设置有效期为1h
                 .compact();
         System.out.println(jwt);
-
     }
 
     /**
