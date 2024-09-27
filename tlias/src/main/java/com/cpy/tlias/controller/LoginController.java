@@ -25,6 +25,7 @@ public class LoginController {
     public Result Login(@RequestBody Emp emp){
         // 查询用户，返回员工对象。如果为空则用户名密码不正确。
         Emp e = empService.login(emp);
+        // 如果能查询到用户，则发放jwt令牌，并返回
         if(e!=null){
             Map<String,Object> claims = new HashMap<>();
             claims.put("username",e.getUsername());
@@ -32,6 +33,7 @@ public class LoginController {
             String jwt = JwtUtils.generateJwt(claims);
             return Result.success(jwt);
         }
+        // 如果没查询到，就返回没有查询到用户名密码
         return Result.error("用户名或密码错误");
 
     }
