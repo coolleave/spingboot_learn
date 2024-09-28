@@ -6,6 +6,8 @@ import jakarta.servlet.annotation.WebFilter;
 
 import java.io.IOException;
 
+
+// filter拦截器优先级按照字母排序，a最大，z最小
 @WebFilter(urlPatterns = "/*")
 public class DemoFilter implements Filter {
     // 创建拦截器，只执行一次

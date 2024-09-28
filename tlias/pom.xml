@@ -89,6 +89,13 @@
             <version>0.9.1</version>
         </dependency>
 
+        <!--引入对象转json格式依赖-->
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
+            <version>2.0.53</version>
+        </dependency>
+
 
         <!--devtools热部署-->
         <dependency>
