@@ -1,11 +1,15 @@
 package com.cpy.tlias.service.Impl;
 
 import com.cpy.tlias.mapper.DeptMapper;
+import com.cpy.tlias.mapper.EmpMapper;
 import com.cpy.tlias.polo.Dept;
 import com.cpy.tlias.service.DeptService;
+import jdk.jfr.StackTrace;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.beans.Transient;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -13,6 +17,9 @@ import java.util.List;
 public class DeptServiceImpl implements DeptService {
     @Autowired
     DeptMapper deptMapper;
+
+    @Autowired
+    EmpMapper empMapper;
 
     @Override
     // 查询部门列表实现方法
@@ -29,8 +36,15 @@ public class DeptServiceImpl implements DeptService {
     /*
        删除部门方法实现
      */
+    @Transactional  // 事务回滚注解，当这个函数出错时，整个函数就像没发生过一样。
     public void deptDel(Integer id) {
-        deptMapper.depDel(id);
+        deptMapper.depDel(id);  // 删除部门
+//        int i = 1/0; // 模拟事务出错
+        empMapper.delByDeptId(id);
+
+
+        
+
     }
 
     /**
