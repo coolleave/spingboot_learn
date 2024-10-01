@@ -1,4 +1,4 @@
-package com.cpy.tlias.polo;
+package com.cpy.tlias.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

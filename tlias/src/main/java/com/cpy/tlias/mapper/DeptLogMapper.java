@@ -1,6 +1,6 @@
 package com.cpy.tlias.mapper;
 
-import com.cpy.tlias.polo.DeptLog;
+import com.cpy.tlias.pojo.DeptLog;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.transaction.annotation.Propagation;

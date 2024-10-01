@@ -1,7 +1,7 @@
 package com.cpy.tlias.service;
 
-import com.cpy.tlias.polo.Emp;
-import com.cpy.tlias.polo.PageBean;
+import com.cpy.tlias.pojo.Emp;
+import com.cpy.tlias.pojo.PageBean;
 
 import java.time.LocalDate;
 import java.util.List;

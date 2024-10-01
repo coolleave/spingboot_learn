@@ -1,5 +1,5 @@
 package com.cpy.tlias.service;
-import com.cpy.tlias.polo.Dept;
+import com.cpy.tlias.pojo.Dept;
 import java.util.List;
 
 

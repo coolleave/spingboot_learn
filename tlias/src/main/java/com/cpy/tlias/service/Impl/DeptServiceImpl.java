@@ -1,10 +1,11 @@
 package com.cpy.tlias.service.Impl;
 
+import com.cpy.tlias.anno.Log;
 import com.cpy.tlias.mapper.DeptLogMapper;
 import com.cpy.tlias.mapper.DeptMapper;
 import com.cpy.tlias.mapper.EmpMapper;
-import com.cpy.tlias.polo.Dept;
-import com.cpy.tlias.polo.DeptLog;
+import com.cpy.tlias.pojo.Dept;
+import com.cpy.tlias.pojo.DeptLog;
 import com.cpy.tlias.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -39,6 +40,7 @@ public class DeptServiceImpl implements DeptService {
     /*
        删除部门方法实现
      */
+    @Log  // 日志记录
     @Transactional  // 事务回滚注解，当这个函数出错时，整个函数就像没发生过一样。
     public void deptDel(Integer id) {
         try {
@@ -61,6 +63,7 @@ public class DeptServiceImpl implements DeptService {
      *
      * @param dept 实体对象
      */
+    @Log  // 日志记录
     public void deptAdd(Dept dept) {
         // 补充新增部门的创建时间和更新时间
         dept.setCreateTime(LocalDateTime.now());
@@ -73,6 +76,7 @@ public class DeptServiceImpl implements DeptService {
      *
      * @param dept 实体对象
      */
+    @Log  // 日志记录
     public void deptUpd(Dept dept) {
         // 将修改部门的时间更新
         dept.setUpdateTime(LocalDateTime.now());

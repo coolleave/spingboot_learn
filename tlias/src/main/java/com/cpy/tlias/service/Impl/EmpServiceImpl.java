@@ -1,8 +1,8 @@
 package com.cpy.tlias.service.Impl;
 
 import com.cpy.tlias.mapper.EmpMapper;
-import com.cpy.tlias.polo.Emp;
-import com.cpy.tlias.polo.PageBean;
+import com.cpy.tlias.pojo.Emp;
+import com.cpy.tlias.pojo.PageBean;
 import com.cpy.tlias.service.EmpService;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;

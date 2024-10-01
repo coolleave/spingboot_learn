@@ -1,6 +1,6 @@
 package com.cpy.tlias.mapper;
 
-import com.cpy.tlias.polo.Emp;
+import com.cpy.tlias.pojo.Emp;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;

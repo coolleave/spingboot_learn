@@ -1,6 +1,6 @@
 package com.cpy.tlias.exception;
 
-import com.cpy.tlias.polo.Result;
+import com.cpy.tlias.pojo.Result;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 

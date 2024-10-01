@@ -1,6 +1,6 @@
 package com.cpy.tlias.controller;
 
-import com.cpy.tlias.polo.Result;
+import com.cpy.tlias.pojo.Result;
 import com.cpy.tlias.utils.AliOSSUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

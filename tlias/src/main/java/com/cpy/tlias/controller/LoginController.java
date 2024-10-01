@@ -1,10 +1,9 @@
 package com.cpy.tlias.controller;
 
-import com.cpy.tlias.polo.Emp;
-import com.cpy.tlias.polo.Result;
+import com.cpy.tlias.pojo.Emp;
+import com.cpy.tlias.pojo.Result;
 import com.cpy.tlias.service.EmpService;
 import com.cpy.tlias.utils.JwtUtils;
-import com.sun.net.httpserver.Authenticator;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -30,6 +29,7 @@ public class LoginController {
             Map<String,Object> claims = new HashMap<>();
             claims.put("username",e.getUsername());
             claims.put("name",e.getName());
+            claims.put("id",e.getId());
             String jwt = JwtUtils.generateJwt(claims);
             return Result.success(jwt);
         }

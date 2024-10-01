@@ -1,6 +1,6 @@
 package com.cpy.tlias.mapper;
 
-import com.cpy.tlias.polo.Dept;
+import com.cpy.tlias.pojo.Dept;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

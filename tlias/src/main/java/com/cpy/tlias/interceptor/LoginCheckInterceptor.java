@@ -1,7 +1,7 @@
 package com.cpy.tlias.interceptor;
 
 import com.alibaba.fastjson2.JSONObject;
-import com.cpy.tlias.polo.Result;
+import com.cpy.tlias.pojo.Result;
 import com.cpy.tlias.utils.JwtUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

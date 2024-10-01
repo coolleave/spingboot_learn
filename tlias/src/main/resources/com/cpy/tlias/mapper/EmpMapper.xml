@@ -59,7 +59,7 @@
     </delete>
 
 
-    <select id="empList" resultType="com.cpy.tlias.polo.Emp">
+    <select id="empList" resultType="com.cpy.tlias.pojo.Emp">
         select * from emp
         <where>
             <if test= "name != null and name != '' ">
