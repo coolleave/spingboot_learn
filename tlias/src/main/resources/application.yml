@@ -4,8 +4,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/tlias
-    username: root
-    password: 943308
+    username: yourusername
+    password: yourpassword
 
 
   # 启动热部署
@@ -29,8 +29,8 @@ mybatis:
 aliyun:
   oss:
     endpoint: https://oss-cn-beijing.aliyuncs.com
-    accessKeyId: LTAI5tQphi9zPNE4Ww8LPsFe
-    accessKeySecret: JoExnJaGxhDRSp9SajidUtVMk5zIUV
+    accessKeyId: yourkeyId
+    accessKeySecret: yourkeySecret
     buketName: web-tlias-cpy
 
 
